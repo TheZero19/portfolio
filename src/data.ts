@@ -6,7 +6,7 @@ export const PersonalInfo: AboutMeData = {
 
   name: "Sampurna KC",
   role: "Unity Game Developer",
-  introduction: "Hello, I am a Game Developer specializing in Unity and C# and have experience in developing games for various platforms. Despite my specialization in Unity, you can also find me engaged with Godot, Raylib and OpenGL.",
+  introduction: "I am a game developer specializing in Unity and C# with experience in developing games for various platforms. Despite my specialization in Unity, you can also find me working with Godot, Raylib, OpenGL and C++.",
   description: "I have completed my Bachelor's degree in Computer Engineering from Kathmandu University, Nepal. The genres of video games that I love playing are FPS, soulslike and deep story-driven games. Apart from video games, I also enjoy music and chess.",
   links: {
     github: "https://github.com/TheZero19",
@@ -25,6 +25,7 @@ export const games: Project[] = [
     links: [
     ],
     media: [
+      { source: "https://www.youtube.com/embed/sTd9mWPqVhg", type: MediaType.YouTube },
       { source: "/images/games/Carrom/loading.png", type: MediaType.Image },
       { source: "/images/games/Carrom/mainmenu.png", type: MediaType.Image },
       { source: "/images/games/Carrom/Tutorial.png", type: MediaType.Image },
@@ -38,7 +39,7 @@ export const games: Project[] = [
   },
   {
     name: "VFX in Godot",
-    description: "These are the visual effects produced in Godot game engine when I was trying to learn Godot Engine in my free time.",
+    description: "These are the visual effects produced in Godot game engine when I was trying to learn Godot Engine in my free time. I created a handful of Environment VFXs and Screen VGXs but only a few of them turned out okay-ish. I will be adding a lot more VFXs in the future as I learn more about Godot Engine.",
     genres: ["VFX", "Godot", "Learning"],
     platforms: [Platform.Windows],
     tools: [Tool.Godot, Tool.CSharp, Tool.Rider],
@@ -62,7 +63,7 @@ export const games: Project[] = [
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/IoTSensors" },
     ],
     media: [
-      { source: "/images/games/iot/iot.png", type: MediaType.Image },
+      { source: "/images/games/iot/iot.PNG", type: MediaType.Image },
     ],
   },
   {
@@ -79,26 +80,25 @@ export const games: Project[] = [
     ],
   },
   {
-    name: "All the internship's Unity projects",
-    description: "These are the projects which I was given to work on during my internship at a game development company.",
-    genres: ["RTS", "Unity", "Learning Projects"],
+    name: "A Collection of Simple Unity projects",
+    description: "These are the some of the Unity projects which I was assigned to during my internship at Avana Games Studio. I created a few mechanics like Player's Mechanics, RTS camera behaviour, Troop deployment system, etc. I also learnt to use Blender for simple 3D modelling and animation during my internship period.",
+    genres: ["RTS", "Adventure", "Mechanics", "Unity", "Learning"],
     platforms: [Platform.Windows, Platform.Mobile],
     tools: [Tool.Unity, Tool.CSharp, Tool.VisualStudio],
     links: [
-      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
-      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
-      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
+      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/Avana_Archers-I" },
+      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/Avana_CompanyOfHeroesClone" },
+      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/Avana_Bowling" },
     ],
     media: [
-      { source: "/images/games/GAME_NAME/Screenshot_1.png", type: MediaType.Image },
-      { source: "/images/games/GAME_NAME/Screenshot_2.png", type: MediaType.Image },
-      { source: "/images/games/GAME_NAME/Screenshot_3.png", type: MediaType.Image },
-      { source: "/images/games/GAME_NAME/Screenshot_4.png", type: MediaType.Image },
+      { source: "https://www.youtube.com/embed/x7WTYvBQtSc", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/B3rfLp9cEMA", type: MediaType.YouTube },
+      { source: "https://www.youtube.com/embed/ujDZij1h1yM", type: MediaType.YouTube },
     ],
   },
   {
     name: "Pong",
-    description: "This is a simple Pong game made during my 7th semester of college as a part of mini project",
+    description: "This is a simple Pong game made during my 7th semester of college as a part of mini project. Despite the simplicity, I had a very hard time implementing a lot of things, setting up the environment, etc. So, I love to showcase this project.",
     genres: ["Pong", "Learning"],
     platforms: [Platform.Windows],
     tools: [Tool.Raylib, Tool.Cpp, Tool.VisualStudio],
