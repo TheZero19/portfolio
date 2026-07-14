@@ -4,50 +4,54 @@ import { MediaItem, MediaType } from "../types";
 import { Row } from "../Styles/StyledComponents";
 
 const MediaWrapper = styled(Row)`
-justify-content: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   cursor: pointer;
 `;
 
 const MediaIframe = styled.iframe`
-  width: 70%;
+  width: 100%;
   height: 100%;
   border: none;
+  border-radius: 18px;
+  background: #030712;
 
   @media (max-width: 768px) {
-    width: 100%;
+    min-height: 220px;
   }
 `;
 
 const MediaImage = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: 300px;
   object-fit: contain;
   cursor: pointer;
+  border-radius: 18px;
 `;
 
 const PopupOverlay = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 20px;
 `;
 
 const PopupImage = styled.img`
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 
   @media (max-width: 768px) {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 96%;
+    max-height: 96%;
   }
 `;
 

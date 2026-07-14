@@ -4,69 +4,71 @@ import { Column } from '../Styles/StyledComponents';
 
 const CenterContainer = styled(Column)`
   align-items: center;
-  margin-top: 80px;
-
-  @media (max-width: 768px) {
-    margin-top: 40px;
-  }
+  margin-top: 24px;
 `;
 
 const ContactContainer = styled(Column)`
-  width: 30vw;
-  padding: 30px 60px;
-    align-items: center;
-
-  background-color: #121212;
-  border-radius: 10px;
+  width: min(100%, 520px);
+  padding: 28px 24px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(9, 18, 34, 0.94), rgba(10, 20, 35, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
   color: white;
-  
+  backdrop-filter: blur(16px);
+
   @media (max-width: 768px) {
-    width: 70vw;
-    padding: 10px 30px;
+    padding: 20px 16px;
   }
 `;
+
 const Title = styled.h2`
-  margin: 30px;
-  
+  margin: 8px 0 8px;
+  font-size: 1.4rem;
+  color: #7fd3ff;
+
   @media (max-width: 768px) {
-    font-size: 1em;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
   }
 `;
 
 const Input = styled.input`
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  font-size: 0.95rem;
 `;
 
 const TextArea = styled.textarea`
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  height: 100px;
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  min-height: 120px;
+  resize: vertical;
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
-  margin: 20px 0;
-  background-color: #25d366;
+  padding: 12px 18px;
+  margin: 16px 0 8px;
+  background: linear-gradient(90deg, #25d366, #1cae55);
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
   cursor: pointer;
-  
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.22);
+
   &:hover {
-    background-color: #1da851;
+    transform: translateY(-1px);
   }
 `;
 

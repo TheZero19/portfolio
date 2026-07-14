@@ -9,11 +9,19 @@ export enum Platform {
   Linux = "Linux",
   iOS = "iOS",
   Android = "Android",
+  Mobile = "Mobile",
 }
 
-export enum GameEngine {
+export enum Tool {
+  None = "None",
   Unity = "Unity",
   Unreal = "Unreal",
+  Godot = "Godot",
+  Raylib = "Raylib",
+  Cpp = "C++",
+  CSharp = "C#",
+  Rider = "Rider",
+  VisualStudio = "Visual Studio",
 }
 
 export enum MediaType {
@@ -48,5 +56,5 @@ export interface Game {
   links: { source: LinkImageSource; url: string }[];
   media: MediaItem[];
   platforms: Platform[];
-  engine: GameEngine;
+  tools: Tool;
 }

@@ -7,6 +7,7 @@ import { Column, Row } from "../Styles/StyledComponents";
 
 export const GameMediaContainer = styled(Column)`
   align-items: end;
+  gap: 10px;
 
   @media (max-width: 768px) {
     align-items: center;
@@ -17,33 +18,35 @@ export const LargeMediaWrapper = styled(Row) <{ $isFading: boolean }>`
   width: 100%;
   height: 320px;
   justify-content: center;
+  align-items: center;
   opacity: ${({ $isFading }) => ($isFading ? 0 : 1)};
   transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 `;
 
 export const ThumbnailContainer = styled(Row)`
   width: 100%;
   gap: 8px;
   justify-content: center;
+  align-items: center;
 `;
 
 export const Thumbnails = styled.div`
   display: flex;
-  gap: 12px;
+  gap: 10px;
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 50%;
-  max-height: 160px;
-  padding: 12px;
-
-  @media (max-width: 1100px) {
-    max-width: 10%;
-  }
+  max-width: 70%;
+  max-height: 140px;
+  padding: 8px;
+  scrollbar-width: thin;
 
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 4px;
-    min-height: 0;
   }
 `;
 
@@ -60,46 +63,46 @@ export const Thumbnail = styled.img<{ $isSelected: boolean }>`
   min-height: 50px;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 5px;
-  border: 3px solid ${({ $isSelected }) => ($isSelected ? "#4e9f3d" : "transparent")};
-  transform: ${({ $isSelected }) => ($isSelected ? "scale(1.1)" : "none")};
-  transition: transform 0.1s ease-in-out;
+  border-radius: 12px;
+  border: 2px solid ${({ $isSelected }) => ($isSelected ? "#7fd3ff" : "rgba(255,255,255,0.14)")};
+  box-shadow: ${({ $isSelected }) => ($isSelected ? "0 0 0 2px rgba(127, 211, 255, 0.2)" : "none")};
+  transform: ${({ $isSelected }) => ($isSelected ? "translateY(-2px)" : "none")};
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 `;
 
 export const PlayIcon = styled.button`
   position: absolute;
-  width: 36px;
-  height: 36px;
-  background: rgba(0, 0, 0, 0.7);
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.75);
   border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   transition: transform 0.2s ease-in-out;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   &:before {
     content: "▶";
-    font-size: 16px;
     margin-left: 2px;
   }
 `;
 
 export const Arrow = styled.button`
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   padding: 10px;
-  color: black;
+  color: #f1f8ff;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 50%;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease, transform 0.2s ease;
   width: 40px;
   height: 40px;
   display: flex;
@@ -107,13 +110,13 @@ export const Arrow = styled.button`
   justify-content: center;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px);
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
   }
 `;
 

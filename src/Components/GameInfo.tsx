@@ -9,54 +9,62 @@ interface GameInfoProps {
 }
 
 const GameInfoContainer = styled(Column)`
+  gap: 12px;
 `;
 
 const GameTitle = styled.h1`
   font-family: "ZenDots", sans-serif;
-  font-size: 2rem;
-  color: #00ced1;
-  margin-top: 0;
-  
+  font-size: 1.8rem;
+  color: #7fd3ff;
+  margin: 0;
+
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 `;
 
 const GameDescription = styled.p`
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #dbeafe;
 
-    @media (max-width: 768px) {
-    font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
   }
 `;
 
 const InfoTable = styled(Column)`
-  gap: 5px;
-  margin: 20px 0;
-  font-size: 1.5rem;
+  gap: 8px;
+  margin: 8px 0 4px;
+  font-size: 0.95rem;
+  color: #c2d7ef;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
 
 const InfoRow = styled(Row)`
   gap: 8px;
+  flex-wrap: wrap;
 `;
 
 const InfoKey = styled.span`
-  font-weight: bold;
-  min-width: 70px;
+  font-weight: 700;
+  min-width: 78px;
   text-align: left;
+  color: #f6fbff;
 `;
 
 const InfoValue = styled.span`
-  color: silver;
+  color: #8ea8c2;
 `;
 
 const LinksContainer = styled(Row)`
   gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
 `;
 
 const GameInfo: React.FC<GameInfoProps> = ({ game }) => {
@@ -76,7 +84,7 @@ const GameInfo: React.FC<GameInfoProps> = ({ game }) => {
                 </InfoRow>
                 <InfoRow>
                     <InfoKey>Engine:</InfoKey>
-                    <InfoValue>{game.engine}</InfoValue>
+                    <InfoValue>{game.tools}</InfoValue>
                 </InfoRow>
 
                 {game.source && <InfoRow>
