@@ -48,19 +48,19 @@ const CVButton = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
+  padding: 11px 22px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text);
-  background: transparent;
+  color: #0c0e13;
+  background: var(--accent);
   text-decoration: none;
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent);
   border-radius: 8px;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: filter 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    background: var(--panel-hover);
-    border-color: var(--muted);
+    filter: brightness(1.08);
+    transform: translateY(-1px);
   }
 `;
 
