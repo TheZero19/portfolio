@@ -11,76 +11,65 @@ import Footer from "./Components/Footer";
 const AppContainer = styled(Column)`
   position: relative;
   min-height: 90vh;
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 40px 24px 64px;
-  gap: 24px;
+  gap: 28px;
 
   @media (max-width: 768px) {
-    gap: 16px;
-    padding: 20px 14px 48px;
+    gap: 20px;
+    padding: 24px 16px 48px;
   }
 `;
 
 const Navbar = styled.nav`
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  margin: 0 auto 6px;
-  background: rgba(6, 14, 24, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(16px);
-  border-radius: 999px;
+  gap: 4px;
+  padding: 6px;
+  margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   width: fit-content;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
-    border-radius: 24px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 6px;
   }
 `;
 
 const NavbarLink = styled(Link)`
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   text-decoration: none;
-  color: #eaf4ff;
-  font-weight: 700;
-  padding: 10px 16px;
-  border-radius: 999px;
-  transition: all 0.25s ease;
+  color: var(--muted);
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.14);
-    color: #ffffff;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: scale(0.96);
+    background: var(--panel-hover);
+    color: var(--text);
   }
 
   @media (max-width: 768px) {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     padding: 8px 12px;
   }
 `;
 
 const App: React.FC = () => {
-  window.addEventListener("scroll", function () {
-    document.body.style.backgroundPosition = `${window.scrollY * 0.05}px ${window.scrollY * 0.8}px`;
-  });
-
   return (
     <Router>
       <AppContainer>
         <SelfSummary />
 
         <Navbar>
-          <NavbarLink to="/">Games 👾</NavbarLink>
-          <NavbarLink to="/about-me">About me 👨🏻‍💻</NavbarLink>
-          <NavbarLink to="/contact">Contact 💬</NavbarLink>
+          <NavbarLink to="/">My Works</NavbarLink>
+          <NavbarLink to="/about-me">Know more about me</NavbarLink>
+          <NavbarLink to="/contact">Say Hi</NavbarLink>
         </Navbar>
 
         <Routes>

@@ -17,20 +17,16 @@ const LogoContainer = styled.a<{ size: number; margin: number }>`
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  margin:  ${({ margin }) => margin}px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 
   &:hover {
-    transform: scale(1.1);
-  }
-  &:active {
-    transform: scale(0.9);
+    opacity: 1;
   }
 
   @media (max-width: 768px) {
     width: ${({ size }) => size * 0.5}px;
     height: ${({ size }) => size * 0.5}px;
-    margin:  ${({ margin }) => margin * 0.5}px;
   }
 `;
 

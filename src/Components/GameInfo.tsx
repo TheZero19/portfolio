@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import { Game as GameInterface } from "../types";
+import { Project as GameInterface } from "../types";
 import LogoButton from "./LogoButton";
 import { Column, Row } from "../Styles/StyledComponents";
 
@@ -13,21 +13,21 @@ const GameInfoContainer = styled(Column)`
 `;
 
 const GameTitle = styled.h1`
-  font-family: "ZenDots", sans-serif;
-  font-size: 1.8rem;
-  color: #7fd3ff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
   margin: 0;
 
   @media (max-width: 768px) {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
 `;
 
 const GameDescription = styled.p`
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #dbeafe;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--muted);
 
   @media (max-width: 768px) {
     font-size: 0.95rem;
@@ -35,10 +35,10 @@ const GameDescription = styled.p`
 `;
 
 const InfoTable = styled(Column)`
-  gap: 8px;
-  margin: 8px 0 4px;
-  font-size: 0.95rem;
-  color: #c2d7ef;
+  gap: 6px;
+  margin: 6px 0;
+  font-size: 0.92rem;
+  color: var(--text);
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -51,18 +51,18 @@ const InfoRow = styled(Row)`
 `;
 
 const InfoKey = styled.span`
-  font-weight: 700;
+  font-weight: 600;
   min-width: 78px;
   text-align: left;
-  color: #f6fbff;
+  color: var(--text);
 `;
 
 const InfoValue = styled.span`
-  color: #8ea8c2;
+  color: var(--muted);
 `;
 
 const LinksContainer = styled(Row)`
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   margin-top: 6px;
 `;
@@ -83,8 +83,8 @@ const GameInfo: React.FC<GameInfoProps> = ({ game }) => {
                     <InfoValue>{game.platforms.join(", ")}</InfoValue>
                 </InfoRow>
                 <InfoRow>
-                    <InfoKey>Engine:</InfoKey>
-                    <InfoValue>{game.tools}</InfoValue>
+                    <InfoKey>Tools:</InfoKey>
+                    <InfoValue>{game.tools.join(", ")}</InfoValue>
                 </InfoRow>
 
                 {game.source && <InfoRow>

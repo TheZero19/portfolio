@@ -10,6 +10,7 @@ export enum Platform {
   iOS = "iOS",
   Android = "Android",
   Mobile = "Mobile",
+  Web = "Web",
 }
 
 export enum Tool {
@@ -20,8 +21,16 @@ export enum Tool {
   Raylib = "Raylib",
   Cpp = "C++",
   CSharp = "C#",
+  Golang = "Golang",
   Rider = "Rider",
+  Goland = "Goland",
+  Redis = "Redis",
+  Docker = "Docker",
+  PostgreSQL = "PostgreSQL",
+  Postman = "Postman",
   VisualStudio = "Visual Studio",
+  Firebase = "Firebase",
+  OpenGL = "OpenGL",
 }
 
 export enum MediaType {
@@ -48,7 +57,7 @@ export interface AboutMeData {
   };
 }
 
-export interface Game {
+export interface Project {
   name: string;
   description: string;
   genres: string[];
@@ -56,5 +65,5 @@ export interface Game {
   links: { source: LinkImageSource; url: string }[];
   media: MediaItem[];
   platforms: Platform[];
-  tools: Tool;
+  tools: Tool[];
 }

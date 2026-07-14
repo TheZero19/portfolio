@@ -21,10 +21,10 @@ export const LargeMediaWrapper = styled(Row) <{ $isFading: boolean }>`
   align-items: center;
   opacity: ${({ $isFading }) => ($isFading ? 0 : 1)};
   transition: opacity 0.3s ease-in-out;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0c11;
+  border: 1px solid var(--border);
 `;
 
 export const ThumbnailContainer = styled(Row)`
@@ -36,12 +36,12 @@ export const ThumbnailContainer = styled(Row)`
 
 export const Thumbnails = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 8px;
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 70%;
   max-height: 140px;
-  padding: 8px;
+  padding: 6px;
   scrollbar-width: thin;
 
   @media (max-width: 768px) {
@@ -63,30 +63,28 @@ export const Thumbnail = styled.img<{ $isSelected: boolean }>`
   min-height: 50px;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 12px;
-  border: 2px solid ${({ $isSelected }) => ($isSelected ? "#7fd3ff" : "rgba(255,255,255,0.14)")};
-  box-shadow: ${({ $isSelected }) => ($isSelected ? "0 0 0 2px rgba(127, 211, 255, 0.2)" : "none")};
-  transform: ${({ $isSelected }) => ($isSelected ? "translateY(-2px)" : "none")};
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  border: 2px solid ${({ $isSelected }) => ($isSelected ? "var(--accent)" : "var(--border)")};
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--muted);
+  }
 `;
 
 export const PlayIcon = styled.button`
   position: absolute;
-  width: 34px;
-  height: 34px;
-  background: rgba(0, 0, 0, 0.75);
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 14px;
-  transition: transform 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
+  font-size: 13px;
+  cursor: pointer;
 
   &:before {
     content: "▶";
@@ -95,28 +93,26 @@ export const PlayIcon = styled.button`
 `;
 
 export const Arrow = styled.button`
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--panel);
+  border: 1px solid var(--border);
   padding: 10px;
-  color: #f1f8ff;
+  color: var(--text);
   cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-  transition: background 0.25s ease, transform 0.2s ease;
-  width: 40px;
-  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.16);
-    transform: translateY(-1px);
+    background: var(--panel-hover);
   }
 
   @media (max-width: 768px) {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 `;
 

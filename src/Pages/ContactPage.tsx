@@ -9,14 +9,12 @@ const CenterContainer = styled(Column)`
 
 const ContactContainer = styled(Column)`
   width: min(100%, 520px);
-  padding: 28px 24px;
+  padding: 24px;
   align-items: center;
-  background: linear-gradient(135deg, rgba(9, 18, 34, 0.94), rgba(10, 20, 35, 0.78));
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
-  color: white;
-  backdrop-filter: blur(16px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
 
   @media (max-width: 768px) {
     padding: 20px 16px;
@@ -25,8 +23,9 @@ const ContactContainer = styled(Column)`
 
 const Title = styled.h2`
   margin: 8px 0 8px;
-  font-size: 1.4rem;
-  color: #7fd3ff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -36,39 +35,38 @@ const Title = styled.h2`
 const Input = styled.input`
   width: 100%;
   max-width: 420px;
-  padding: 12px 14px;
+  padding: 11px 13px;
   margin: 8px 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   font-size: 0.95rem;
 `;
 
 const TextArea = styled.textarea`
   width: 100%;
   max-width: 420px;
-  padding: 12px 14px;
+  padding: 11px 13px;
   margin: 8px 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   font-size: 0.95rem;
   min-height: 120px;
   resize: vertical;
 `;
 
 const Button = styled.button`
-  padding: 12px 18px;
+  padding: 11px 18px;
   margin: 16px 0 8px;
-  background: linear-gradient(90deg, #25d366, #1cae55);
-  color: white;
+  background: var(--accent);
+  color: #0c0e13;
   border: none;
-  border-radius: 999px;
+  border-radius: 8px;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.22);
 
   &:hover {
-    transform: translateY(-1px);
+    filter: brightness(1.05);
   }
 `;
 

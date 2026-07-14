@@ -15,7 +15,7 @@ const MediaIframe = styled.iframe`
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 18px;
+  border-radius: 8px;
   background: #030712;
 
   @media (max-width: 768px) {
@@ -29,7 +29,7 @@ const MediaImage = styled.img`
   max-height: 300px;
   object-fit: contain;
   cursor: pointer;
-  border-radius: 18px;
+  border-radius: 8px;
 `;
 
 const PopupOverlay = styled.div`
@@ -46,8 +46,7 @@ const PopupOverlay = styled.div`
 const PopupImage = styled.img`
   max-width: 80%;
   max-height: 80%;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
 
   @media (max-width: 768px) {
     max-width: 96%;

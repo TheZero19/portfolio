@@ -1,8 +1,8 @@
-import { AboutMeData, Game, Tool, LinkImageSource, MediaType, Platform } from "./types";
+import { AboutMeData, Project, Tool, LinkImageSource, MediaType, Platform } from "./types";
 
 export const PersonalInfo: AboutMeData = {
-  image: "/images/Profile.png",
-  cvUri: "/files/CV_Sampurna_KC.pdf",
+  image: `${process.env.PUBLIC_URL}/images/Profile.png`,
+  cvUri: `${process.env.PUBLIC_URL}/files/CV_Sampurna_KC.pdf`,
 
   name: "Sampurna KC",
   role: "Unity Game Developer",
@@ -15,13 +15,13 @@ export const PersonalInfo: AboutMeData = {
   }
 };
 
-export const games: Game[] = [
+export const games: Project[] = [
   {
     name: "Carrom",
     description: "Developed a Carrom game for my freelance work featuring the Nepali-style rules along with special types of shots which upon execution, grants special bonus scores to the player. The game also has on-device multiplayer mode where two players can play against each other on the same device.",
     genres: ["Mobile", "Multiplayer", "Board Game"],
     platforms: [Platform.Mobile],
-    tools: Tool.Unity,
+    tools: [Tool.Unity, Tool.Firebase, Tool.CSharp, Tool.Rider],
     links: [
     ],
     media: [
@@ -41,7 +41,7 @@ export const games: Game[] = [
     description: "These are the visual effects produced in Godot game engine when I was trying to learn Godot Engine in my free time.",
     genres: ["VFX", "Godot", "Learning"],
     platforms: [Platform.Windows],
-    tools: Tool.Godot,
+    tools: [Tool.Godot, Tool.CSharp, Tool.Rider],
     links: [
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
     ],
@@ -53,11 +53,24 @@ export const games: Game[] = [
     ],
   },
   {
+    name: "IOT Sensors",
+    description: "A Golang application that ingests IoT sensor readings, caches state in Redis, and periodically synchronizes aggregated data to PostgreSQL. The service exposes HTTP endpoints to register sensors and submit temperature readings.", 
+    genres: ["Golang", "IOT", "Learning"],
+    platforms: [Platform.Web],
+    tools: [Tool.Golang, Tool.Goland, Tool.Redis, Tool.PostgreSQL, Tool.Docker, Tool.Postman],
+    links: [
+      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/IoTSensors" },
+    ],
+    media: [
+      { source: "/images/games/iot/iot.png", type: MediaType.Image },
+    ],
+  },
+  {
     name: "XeruGL",
     description: "This is a project that keeps track of my OpenGL learning journey. So far, there are a few cubes with textures attached to them and a camera that can be moved around the scene. The project is still in its early stages and I will be adding more features to it as I learn more about OpenGL.",
     genres: ["Graphics Programming", "OpenGL", "Learning Project"],
     platforms: [Platform.Windows],
-    tools: Tool.None,
+    tools: [Tool.OpenGL, Tool.Cpp, Tool.Rider],
     links: [
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
     ],
@@ -70,7 +83,7 @@ export const games: Game[] = [
     description: "These are the projects which I was given to work on during my internship at a game development company.",
     genres: ["RTS", "Unity", "Learning Projects"],
     platforms: [Platform.Windows, Platform.Mobile],
-    tools: Tool.Unity,
+    tools: [Tool.Unity, Tool.CSharp, Tool.VisualStudio],
     links: [
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
@@ -88,7 +101,7 @@ export const games: Game[] = [
     description: "This is a simple Pong game made during my 7th semester of college as a part of mini project",
     genres: ["Pong", "Learning"],
     platforms: [Platform.Windows],
-    tools: Tool.Raylib,
+    tools: [Tool.Raylib, Tool.Cpp, Tool.VisualStudio],
     links: [
       { source: LinkImageSource.Github, url: "https://github.com/TheZero19/COMP342-graphics-miniProject" },
     ],
