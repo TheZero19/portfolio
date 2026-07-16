@@ -39,12 +39,11 @@ export const games: Project[] = [
   },
   {
     name: "VFX in Godot",
-    description: "These are the visual effects produced in Godot game engine when I was trying to learn Godot Engine in my free time. I created a handful of Environment VFXs and Screen VGXs but only a few of them turned out okay-ish. I will be adding a lot more VFXs in the future as I learn more about Godot Engine.",
+    description: "These are the visual effects produced in Godot game engine when I was trying to learn Godot Engine in my free time. I created a handful of Environment VFXs and Screen VFXs but only a few of them turned out okay-ish. I will be adding a lot more VFXs in the future as I learn more about Godot Engine.",
     genres: ["VFX", "Godot", "Learning"],
     platforms: [Platform.Windows],
     tools: [Tool.Godot, Tool.CSharp, Tool.Rider],
     links: [
-      { source: LinkImageSource.Github, url: "https://github.com/TheZero19/XeruGL" },
     ],
     media: [
       { source: "https://www.youtube.com/embed/7rJcmt2Z0WI", type: MediaType.YouTube},
